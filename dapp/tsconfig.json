@@ -1,0 +1,26 @@
+{
+  "extends": "@toruslabs/config/tsconfig.default.json",
+  "compilerOptions": {
+    "target": "es6",
+    "module": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx", // 或 "react" 根据你的 React 版本
+    "paths": {
+      "@web3auth/*-adapter": ["./packages/adapters/*-adapter"],
+      "@web3auth/*-provider": ["./packages/providers/*-provider"],
+      "@web3auth/*": ["./packages/*"],
+      "@web3auth/*-plugin": ["./packages/plugins/*-plugin"]
+    }
+  },
+  "include": ["src"]
+}
